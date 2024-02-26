@@ -26,7 +26,7 @@ const formSchema = z.object({
 // Define the types for your form values
 type FormValues = z.infer<typeof formSchema>;
 
-const TheForm: React.FC = () => {
+const PetForm: React.FC = () => {
   // Initialize the form with react-hook-form and Zod resolver
   const methods = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -124,4 +124,4 @@ const TheForm: React.FC = () => {
   );
 };
 
-export default TheForm;
+export default PetForm;
